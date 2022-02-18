@@ -69,7 +69,7 @@ module.exports = (fastify, _, done) => {
       // Add refresh token to httpOnly cookie
       reply.setCookie("refresh", refreshToken, {
         httpOnly: true,
-        maxAge: 24 * 60 * 60 * 1000,
+        maxAge: 24 * 60 * 60 * 1000 * 7,
       });
 
       // Send back access token with refresh token in the httpOnly cookie
